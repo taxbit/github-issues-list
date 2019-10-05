@@ -12,7 +12,7 @@
         </template>
       </div>
     </div>
-    <div class="list__item-comment">
+    <div v-if="issue.comments" class="list__item-comment">
       {{issue.comments}}
     </div>
   </div>
@@ -77,7 +77,7 @@ $large: 1024px;
   &-labels {
     display: flex;
     flex-wrap: wrap;
-    @include respond-to(handhelds) { 
+    @include respond-to(handhelds) {
         flex-direction: column ;
         align-items: flex-start;
       }
@@ -95,7 +95,7 @@ $large: 1024px;
 
     &:not(:last-of-type) {
       margin-right: 5px;
-      @include respond-to(handhelds) { 
+      @include respond-to(handhelds) {
         margin-bottom: 3px;
       }
     }
